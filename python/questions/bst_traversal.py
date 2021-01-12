@@ -24,6 +24,8 @@
 # <h3>Sample Output</h3>
 # <pre>13</pre>
 
+# O(log(n)) time | O(log(n)) space
+# O(n) time | O(n) space
 def findClosestValueInBst(tree, target):
     # Write your code here.
     return findClosestValue(tree, target, tree.value)
@@ -31,7 +33,14 @@ def findClosestValueInBst(tree, target):
 def findClosestValue(tree, target, closestValue):
 	if tree is None:
 		return closestValue
-	if abs(target - closestValue) > abs(target)
+	if abs(target - closestValue) > abs(target - tree.value):
+		closestValue = tree.value
+	if target < tree.value:
+		return findClosestValue(tree.left, target, closestValue)
+	elif target > tree.value:
+		return findClosestValue(tree.right, target, closestValue)
+	else:
+		return closestValue
 
 
 # This is the class of the input tree. Do not edit.
