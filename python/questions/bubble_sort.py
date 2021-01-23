@@ -19,6 +19,7 @@ def bubbleSort(array):
     # Write your code here.
     isSorted = False
     counter = 0
+    # Counter is just a minor optimization to prevent it from including the largest number in subsequent sort, since it's already sorted
     while not isSorted:
       isSorted = True
       for i in range(len(array) - 1 - counter):
