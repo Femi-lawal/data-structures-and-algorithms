@@ -7,3 +7,14 @@
 # Can you optimize your algorithm by using recursion? What are the implications of recursion on an algorithm's space-time complexity analysis?
 # Go back to an iterative solution and try using pointers to solve this problem: start with a pointer at the first index of the string and a pointer at the final index of the string. What can you do from there?
 
+# O(n) time| O(1) space
+def isPalindrome(string):
+    # Write your code here.
+	leftIdx = 0
+	rightIdx = len(string) - 1
+	while leftIdx < rightIdx:
+		if string[leftIdx] != string[rightIdx]:
+			return False
+		leftIdx += 1
+		rightIdx -= 1
+	return True
