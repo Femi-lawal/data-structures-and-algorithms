@@ -13,3 +13,14 @@
 #   for instance - and using that to determine which letters the input string's letters should be mapped to.
 # How do you handle cases where a letter gets shifted to a position that requires wrapping around the alphabet? What about cases where the key is very
 # large and causes multiple wrappings around the alphabet? The modulo operator should be your friend here.
+
+def caesarCipherEncryptor(string, key):
+  newLetters =  []
+  newKey = key % 26
+  for letter in string:
+    newLetters.append(getNewLetter(letter, newKey))
+  return "".join(newLetters)
+
+def getNewLetter(letter, key):
+  newLetterCode = ord(letter) + key
+  return chr(newLetterCode) if newLetterCode <= 122 else chr(96 + newLetterCode % 122)
