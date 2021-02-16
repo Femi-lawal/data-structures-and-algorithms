@@ -24,3 +24,16 @@ def caesarCipherEncryptor(string, key):
 def getNewLetter(letter, key):
   newLetterCode = ord(letter) + key
   return chr(newLetterCode) if newLetterCode <= 122 else chr(96 + newLetterCode % 122)
+
+
+def caesarCipherEncryptor2(string, key):
+  newLetters =  []
+  newKey = key % 26
+  alphabet = list('abcdefghijklmnopqrstuvwxyz')
+  for letter in string:
+    newLetters.append(getNewLetter2(letter, newKey, alphabet))
+  return "".join(newLetters)
+
+def getNewLetter2(letter, key, alphabet):
+  newLetterCode = alphabet(letter) + key
+  return alphabet[newLetterCode % 26]
