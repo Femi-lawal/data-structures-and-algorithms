@@ -39,7 +39,7 @@ class BinaryTree:
 
 def branchSums(root):
   sums = []
-	computeSums(root, 0, sums)
+  computeSums(root, 0, sums)
   return sums
 
 def computeSums(node, runningSum, sums):
