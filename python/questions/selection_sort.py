@@ -3,9 +3,6 @@
 #   version of that array. Use the Selection Sort algorithm to sort the array.
 # 
 # 
-#   If you're unfamiliar with Selection Sort, we recommend watching the Conceptual
-#   Overview section of this question's video explanation before starting to code.
-# 
 # Sample Input
 #  = [8, 5, 2, 9, 5, 6, 3]
 # 
