@@ -29,3 +29,23 @@
 # Sample Output
 # true // Place all students with blue shirts in the back row.
 # 
+
+def classPhotos(redShirtHeights, blueShirtHeights):
+  	redShirtHeights.sort(reserse=True)
+	blueShirtHeights.sort(reserse=True)
+	red = "RED"
+	blue = "BLUE"
+	
+	shirtColorInFirstRow = red if redShirtHeight[0] < blueShirtHeights[0] else blue
+	for idx in range(len(redShirtHeights)):
+		redShirtHeight = redShirtHeights[idx]
+		blueShirtHeight = blueShirtHeights[idx]
+		
+		if shirtColorInFirstRow == red:
+			if redShirtHeight >= blueShirtHeight:
+				return False
+			else:
+				if blueShirtHeight >= redShirtHeight:
+					return False
+		
+	return True
