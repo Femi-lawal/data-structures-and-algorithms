@@ -37,7 +37,7 @@ class Node:
 
 	# O(v + e) time | O(v) space
   def depthFirstSearch(self, array):
-		array.append(self.name)
+    array.append(self.name)
     for child in self.children:
-			child.depthFirstSearch(array)
-		return array
+      child.depthFirstSearch(array)
+    return array
