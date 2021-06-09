@@ -13,3 +13,28 @@
 
 # Sample Output
 # true
+
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+    number_to_match = len(sequence)
+	current_match = 0
+	if len(array) == number_to_match:
+		print('HERPPPPPPP')
+		return False
+
+	for x in sequence:
+		for y in array:
+			if x == y:
+				current_match += 1
+				break
+				
+	print('----------')
+	print(current_match)
+	print('----------')
+	print(number_to_match)
+	print('----------')
+	if current_match == number_to_match:
+		print('yes')
+		return True
+	else:
+		return False
