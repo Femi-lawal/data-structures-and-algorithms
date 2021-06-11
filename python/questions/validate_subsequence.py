@@ -16,25 +16,17 @@
 
 def isValidSubsequence(array, sequence):
     # Write your code here.
-    number_to_match = len(sequence)
-	current_match = 0
-	if len(array) == number_to_match:
-		print('HERPPPPPPP')
-		return False
+    if len(array) < len(sequence):
+        return False
 
-	for x in sequence:
-		for y in array:
-			if x == y:
-				current_match += 1
-				break
-				
-	print('----------')
-	print(current_match)
-	print('----------')
-	print(number_to_match)
-	print('----------')
-	if current_match == number_to_match:
-		print('yes')
-		return True
-	else:
-		return False
+        sequence_index = 0
+        list_index = 0
+        while list_index < len(array):
+            if sequence_index == len(sequence) - 1:
+                return True
+                break
+            if sequence[sequence_index] == array[list_index]:
+                sequence_index += 1
+            list_index += 1
+
+        return False
