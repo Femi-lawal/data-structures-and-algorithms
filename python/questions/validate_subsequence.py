@@ -22,10 +22,10 @@ def isValidSubsequence(array, sequence):
         sequence_index = 0
         list_index = 0
         while list_index < len(array):
-            if sequence_index == len(sequence) - 1:
-                return True
-                break
             if sequence[sequence_index] == array[list_index]:
+                if sequence_index == len(sequence) - 1:
+                    return True
+                    break
                 sequence_index += 1
             list_index += 1
 
